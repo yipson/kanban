@@ -1,6 +1,7 @@
 package com.techm.users.controller;
 
 import com.techm.users.domain.User;
+import com.techm.users.repositories.UserRepository;
 import com.techm.users.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -10,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("student")
+@RequestMapping("user")
 public class UserController {
 
     @Autowired
