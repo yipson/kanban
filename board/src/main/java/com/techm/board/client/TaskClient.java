@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.List;
 import java.util.Optional;
 
-@FeignClient(name="tasks-service", url= "localhost:8200")
+//@FeignClient(name="tasks-service", url= "localhost:8200")
+@FeignClient(name="tasks-service")
 public interface TaskClient {
 
     @GetMapping(path= "task/{taskId}")

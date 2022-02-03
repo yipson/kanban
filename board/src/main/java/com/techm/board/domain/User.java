@@ -14,13 +14,15 @@ public class User implements Serializable {
     private String lastName;
     private String email;
     private String password;
+    private String port;
 
     public User(){}
 
     public User(String name,
                 String lastName,
                 String email,
-                String password) {
+                String password,
+                String port) {
         this.name = name;
         this.lastName = lastName;
         this.email = email;
@@ -31,7 +33,8 @@ public class User implements Serializable {
                 String name,
                 String lastName,
                 String email,
-                String password) {
+                String password,
+                String port) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
