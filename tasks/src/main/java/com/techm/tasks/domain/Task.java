@@ -4,11 +4,12 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Getter
 @Setter
 @Entity
-public class Task {
+public class Task implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,24 +26,32 @@ public class Task {
     public Task() {
     }
 
-    public Task(String description, Status status) {
+    public Task(String description,
+                Status status) {
         this.description = description;
         this.status = status;
     }
 
-    public Task(String description, Status status, Long idUser) {
+    public Task(String description,
+                Status status,
+                Long idUser) {
         this.description = description;
         this.status = status;
         this.idUser = idUser;
     }
 
-    public Task(Long id, String description, Status status) {
+    public Task(Long id,
+                String description,
+                Status status) {
         this.id = id;
         this.description = description;
         this.status = status;
     }
 
-    public Task(Long id, String description, Status status, Long idUser) {
+    public Task(Long id,
+                String description,
+                Status status,
+                Long idUser) {
         this.id = id;
         this.description = description;
         this.status = status;
