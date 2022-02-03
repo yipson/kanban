@@ -8,10 +8,20 @@ import java.util.List;
 
 @Getter
 @Setter
-public class BoardDTO implements Serializable {
+public class Board implements Serializable {
 
     private Long userId;
     private String userFullName;
-    private List<Task> Tasks;
+    private List<Task> tasks;
 
+    public Board() {
+    }
+
+    public Board(Long userId,
+                 String userFullName,
+                 List<Task> tasks) {
+        this.userId = userId;
+        this.userFullName = userFullName;
+        this.tasks = tasks;
+    }
 }
