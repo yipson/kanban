@@ -26,6 +26,9 @@ public class User {
     @Column(name = "password")
     private String password;
 
+    @Transient
+    private String port;
+
     public User(){}
 
     public User(String name,
@@ -36,5 +39,17 @@ public class User {
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+    }
+
+    public User(String name,
+                String lastName,
+                String email,
+                String password,
+                String port) {
+        this.name = name;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.port = port;
     }
 }
