@@ -10,4 +10,8 @@ public interface UserService {
     Optional<User> getOneUser(Long userId);
 
     List<User> listUsers();
+
+    void addUser(User user);
+
+    User returnUserByCredentials(User user);
 }
