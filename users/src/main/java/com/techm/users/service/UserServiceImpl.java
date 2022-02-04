@@ -30,16 +30,4 @@ public class UserServiceImpl implements UserService{
         return userRepository.findAll();
     }
 
-    @Override
-    public void addUser(User user) {
-        Optional<User> userOptional = userRepository.findUserByEmail(user.getEmail());
-
-        if (userOptional.isPresent()){
-            throw new IllegalStateException("email taken");
-        }
-        userRepository.save(user);
-    }
-
-
-
 }
