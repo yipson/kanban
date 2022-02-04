@@ -1,4 +1,4 @@
-package com.techm.users.repositories;
+package com.techm.users.repository;
 
 import com.techm.users.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;

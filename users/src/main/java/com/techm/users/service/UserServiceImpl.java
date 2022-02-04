@@ -1,7 +1,7 @@
 package com.techm.users.service;
 
 import com.techm.users.domain.User;
-import com.techm.users.repositories.UserRepository;
+import com.techm.users.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
