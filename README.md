@@ -1,6 +1,8 @@
 # kanban
 Tablero kanban
 
+![Image text](https://github.com/yipson/kanban/blob/master/arquitectura-microservices.png)
+
 
 El proyecto consta de 6 microservicios:
 - users: encargado de la comunicacion de la entidad users con la base de datos, el cual cuenta con 3 controladores los cuales responde a peticiones de registro de usuarios, buscar un usuario por su id y login. 
