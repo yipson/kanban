@@ -1,5 +1,6 @@
 package com.techm.users.service;
 
+import com.techm.users.client.AuthClient;
 import com.techm.users.domain.User;
 import com.techm.users.utils.JWTUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,8 @@ public class AuthServiceImpl implements AuthService{
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private AuthClient authClient;
 
     @Override
     public String getToken(User user) {
@@ -28,6 +31,11 @@ public class AuthServiceImpl implements AuthService{
         }
 
         return "FAIL";
+    }
+
+    @Override
+    public boolean verifyToken(String token) {
+        return authClient.verifyToken(token);
     }
 
 
