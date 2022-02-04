@@ -29,9 +29,4 @@ public class BoardController {
         return boardService.showBoardByUserId(userId);
     }
 
-    @GetMapping(path = "user")
-    public List<User> listUsers(){
-        return userClient.listUsers();
-    }
-
 }

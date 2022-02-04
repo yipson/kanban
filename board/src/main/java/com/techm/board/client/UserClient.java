@@ -16,6 +16,4 @@ public interface UserClient {
     Optional<User> getOneUser(
             @PathVariable("userId") Long userId);
 
-    @GetMapping(path= "user")
-    List<User> listUsers();
 }
