@@ -6,6 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 @FeignClient(name="auth-service")
 public interface AuthClient {
 
-    @GetMapping
+    @GetMapping(path="auth")
     boolean verifyToken(String token);
 }
