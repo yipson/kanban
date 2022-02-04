@@ -35,9 +35,15 @@ public class ApiGatewayConfiguration {
                                 .addRequestHeader("Authorization", "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI5IiwiaWF0IjoxNjQzOTkzMzc4LCJzdWIiOiJzYW50aWFnb0BtYWlsLmNvbSIsImlzcyI6Ik1haW4iLCJleHAiOjE2NDQ1OTgxNzh9.6MZCZT3mLbYcuaeUiOsDGym6lanqo7vTy03XANGGPwM")
                                 .addResponseHeader("Authorization", "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI5IiwiaWF0IjoxNjQzOTkzMzc4LCJzdWIiOiJzYW50aWFnb0BtYWlsLmNvbSIsImlzcyI6Ik1haW4iLCJleHAiOjE2NDQ1OTgxNzh9.6MZCZT3mLbYcuaeUiOsDGym6lanqo7vTy03XANGGPwM"))
                         .uri("lb://users-service"))
-//                .route(p -> p
-//                        .path("/login")
-//                        .uri("lb://users-service/login"))
+
+                .route(p -> p
+                        .path("/login")
+                        .uri("lb://users-service/login"))
+
+                .route(p -> p
+                        .path("/register")
+                        .uri("lb://users-service/user/register"))
+
 
                 .build();
     }
